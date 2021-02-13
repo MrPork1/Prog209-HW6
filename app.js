@@ -27,6 +27,20 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 
+app.get('/movies', function(req, res) {
+    let movieObject = {
+        movie1: "Star Wars",
+        movie2: "Shawshank Redemption",
+        movie3: "Avengers Endgame",
+        movie4: "Terminator 2"
+    };
+
+    res.render('pages/movies', {
+        movie: movieObject
+    });
+});
+
+
 
 // upLoadData page 
 // sending a get with 1 param
