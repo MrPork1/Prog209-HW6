@@ -40,7 +40,18 @@ app.get('/movies', function(req, res) {
     });
 });
 
+app.get('/tvshows', function(req, res) {
+    let tvObject = {
+        tv1: "Big Bang Theory",
+        tv2: "Lost",
+        tv3: "Any HG TV shows",
+        tv4: "Cooking shows"
+    };
 
+    res.render('pages/tvshows', {
+        tv: tvObject
+    });
+});
 
 // upLoadData page 
 // sending a get with 1 param
